@@ -1,0 +1,6 @@
+{
+  "name": "ImageToPNG – Free Online Image to PNG Converter",
+  "description": "Convert JPG, JPEG, WEBP, GIF, BMP, SVG, and other image formats to PNG online for free. Fast, browser-based conversion with instant download and no account required.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

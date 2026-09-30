@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#0055ff" />
+      <stop offset="100%" stopColor="#0040dd" />
+    </linearGradient>
+
+    <!-- Top Gloss Highlight -->
+    <linearGradient id="glossGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
+      <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+    </linearGradient>
+
+    <!-- Sun Gradient -->
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ffc700" />
+      <stop offset="100%" stopColor="#ff9000" />
+    </linearGradient>
+
+    <!-- Mountains Gradient -->
+    <linearGradient id="mtnBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#308aff" />
+      <stop offset="100%" stopColor="#1a6ee8" />
+    </linearGradient>
+    <linearGradient id="mtnFront" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0070f3" />
+      <stop offset="100%" stopColor="#0050c8" />
+    </linearGradient>
+
+    <!-- Fold Gradient -->
+    <linearGradient id="foldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#9cc5ff" />
+      <stop offset="100%" stopColor="#5d9cff" />
+    </linearGradient>
+
+    <!-- Badge Emerald Gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#00e699" />
+      <stop offset="50%" stopColor="#00c878" />
+      <stop offset="100%" stopColor="#00a85d" />
+    </linearGradient>
+
+    <!-- Arrow 3D Gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ffffff" />
+      <stop offset="100%" stopColor="#bde0fe" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadows -->
+    <filter id="badgeShadow" x="-15%" y="-15%" width="130%" height="135%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#00186b" flood-opacity="0.45" />
+    </filter>
+    <filter id="paperShadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#001a75" flood-opacity="0.35" />
+    </filter>
+    <filter id="arrowShadow" x="-15%" y="-15%" width="130%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#001a75" flood-opacity="0.3" />
+    </filter>
+
+    <clipPath id="paperClip">
+      <path d="M72 156C72 125.072 97.072 100 128 100H250L314 164V316C314 346.928 288.928 372 258 372H128C97.072 372 72 346.928 72 316V156Z" />
+    </clipPath>
+  </defs>
+
+  <!-- 1. Squircle App Background -->
+  <rect width="512" height="512" rx="118" fill="url(#bgGrad)" />
+  <rect x="2" y="2" width="508" height="240" rx="116" fill="url(#glossGrad)" />
+
+  <!-- 2. White Picture Document Card -->
+  <g filter="url(#paperShadow)">
+    <path d="M72 156C72 125.072 97.072 100 128 100H250L314 164V316C314 346.928 288.928 372 258 372H128C97.072 372 72 346.928 72 316V156Z" fill="#ffffff" />
+    
+    <!-- Photo Inside -->
+    <g clipPath="url(#paperClip)">
+      <!-- Sun -->
+      <circle cx="145" cy="180" r="32" fill="url(#sunGrad)" />
+      <!-- Back Mountain -->
+      <path d="M175 372L246 220L314 286V372H175Z" fill="url(#mtnBack)" />
+      <!-- Front Mountain -->
+      <path d="M72 372L168 254L252 372H72Z" fill="url(#mtnFront)" />
+    </g>
+
+    <!-- Folded Corner -->
+    <path d="M250 100V144C250 155.046 258.954 164 270 164H314L250 100Z" fill="url(#foldGrad)" />
+  </g>
+
+  <!-- 3. Curved 3D Swoop Conversion Arrow -->
+  <g filter="url(#arrowShadow)">
+    <!-- Curved Tail -->
+    <path d="M312 142C358 142 418 168 440 228C448 249 446 270 442 284" stroke="url(#arrowGrad)" stroke-width="32" stroke-linecap="round" fill="none" />
+    <!-- Arrow Head pointing down into PNG badge -->
+    <path d="M394 284L442 346L490 284H454C454 284 454 284 454 284H394Z" fill="url(#arrowGrad)" />
+  </g>
+
+  <!-- 4. Prominent Emerald Green PNG Pill Badge -->
+  <g filter="url(#badgeShadow)">
+    <rect x="180" y="270" width="272" height="152" rx="46" fill="url(#badgeGrad)" />
+    <!-- Top inner highlight -->
+    <path d="M226 270H406C431.405 270 452 290.595 452 316V322C436 308 392 294 316 294C240 294 196 308 180 322V316C180 290.595 200.595 270 226 270Z" fill="#ffffff" fill-opacity="0.25" />
+    <!-- Bold PNG Text -->
+    <text x="316" y="380" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="94" font-weight="900" letter-spacing="-3" text-anchor="middle">PNG</text>
+  </g>
+</svg>
